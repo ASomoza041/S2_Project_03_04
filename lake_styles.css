@@ -1,12 +1,182 @@
-﻿@/*
+﻿@charset "utf-8";
+/* 
+The code below holds what you need to use certain fonts for your text.
+ So the code below would let you use the "champagne" font and the "DokbinPlain" fonts
+*/
+
+@font-face {
+    font-family: champagne;
+    src: url('cac_champagne.ttf') format('truetype'), 
+    url('cac_champagne.woff') format('woff');
+}
+
+@font-face {
+    font-family: DobkinPlain;
+    src: url('DobkinPlain.tff') format('truetype'),
+    url('DokbinPlain.woff') format('woff');
+}  
+/*
    New Perspectives on HTML5 and CSS3, 7th Edition
    Tutorial 2
    Case Problem 4
    
    Great Lakescape Lodge Style Sheet
-   Author: 
-   Date:   
+   Author: Alex A Somoza
+   Date: 9-11-18  
    
    Filename: lake_styles.css
 
 */
+
+
+/* structural styles */
+/* 
+The structural stlyes holds the style rules for the sectional elements. 
+These hold more of the basic style rules such as colors, fonts, and spacing.
+*/
+ html {
+     background-color: rgb(177, 135, 27);
+    font-family: 'DokbinPlain', sans-serif;
+ }
+ 
+
+ body {
+     background-color: rgb(235, 203, 122);
+ }
+
+ body p {
+     padding: 8px; 
+ }
+
+ 
+ body img {
+     padding: 4px;
+ }
+
+ footer {
+     background-color: chocolate;
+     color: black;
+     opacity: 0.5;
+     text-align: center;
+     padding: 10px;
+ }
+
+ /* section styles */
+ /* 
+The section stlyes holds the style rules for the section elements. 
+These style rules have more complicated selectors ,classes. These let you get more specicfic with what you want to affect.
+However, they still have some of the more basic style rules including color, font, and spacing.
+*/
+
+ section#leftcol h1 {
+     font-family: 'champagne';
+     font-size: 3.5em;
+     margin: 13px;
+     padding-left: 15px;
+     text-align: left;
+    
+
+ }
+
+ section#leftcol h2 {
+     padding: 0px;
+     margin-top: 5px;
+     margin-bottom: 5px;
+
+ }
+
+ section#rightcol>nav>h2 {
+    font-family: 'champagne';
+    color: black;
+    opacity: 0.7;
+    font-size: 3em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+ }
+
+ section#rightcol nav {
+     padding: 8px 0px 16px 55px;
+     margin: 16px 0px 16px 0px;
+ }
+
+ 
+
+/* header styles */
+/* 
+The header stlyes holds the style rules for the header elements. 
+For these I only needed to adjust the font weight of the h1 elements. This makes the text more or less bold.
+*/
+h1 {
+    font-weight: bolder;
+}
+
+
+ /* navigation styles */
+ /* 
+The navigation stlyes holds the style rules for the nav elements. 
+These hold more of the basic style rules such as colors, fonts, and spacing. 
+However, the style rules become very specific about what affects the nav elements. 
+For example, when you hover of one of the top hyperlinks, it will change color.
+*/
+nav {
+    padding-left: 53px;
+}
+
+
+ nav>ul {
+    list-style-type: none;
+}
+ 
+ 
+ nav>ul>li>a {
+     color: maroon;
+     text-decoration: none;
+     
+ }
+
+ nav>ul>li>a:hover,
+ nav>ul>li>a:active {
+     color: rgb(225, 0, 0);
+ }
+
+ 
+
+ /* blockquote styles */
+ /* 
+The blockquote stlyes holds the style rules for the blockquote element. 
+These hold more of the basic style rules such as colors, fonts, and spacing. 
+For this code I added quotation marks before and after the text.
+*/
+ blockquote {
+     background-color: chocolate;
+     padding: 10px 30px 10px 30px;
+     margin: 80px 0px 0px 0px;
+     font-family: 'DokbinPlain', sans-serif;
+
+ }
+
+blockquote::before {
+    content: open-quote;
+}
+
+ blockquote::after {
+     content: close-quote;
+ }
+
+ /* aside styles */
+ /* 
+The aside stlyes holds the style rules for the aside elements. 
+These hold more of the basic style rules such as colors, fonts, and spacing.
+*/
+
+aside {
+    padding: 10px 8px 10px 8px;
+    background-color: chocolate;
+    font-family: 'DokbinPlain', sans-serif;
+}
+
+
+
+
+
+
