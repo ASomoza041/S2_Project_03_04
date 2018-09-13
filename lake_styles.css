@@ -6,15 +6,16 @@ The code below holds what you need to use certain fonts for your text.
 
 @font-face {
     font-family: champagne;
-    src: url('cac_champagne.ttf') format('truetype'), 
-    url('cac_champagne.woff') format('woff');
+    src: url('cac_champagne.ttf') format('truetype'),
+        url('cac_champagne.woff') format('woff');
 }
 
 @font-face {
     font-family: DobkinPlain;
     src: url('DobkinPlain.tff') format('truetype'),
-    url('DokbinPlain.woff') format('woff');
-}  
+        url('DokbinPlain.woff') format('woff');
+}
+
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
    Tutorial 2
@@ -34,72 +35,74 @@ The code below holds what you need to use certain fonts for your text.
 The structural stlyes holds the style rules for the sectional elements. 
 These hold more of the basic style rules such as colors, fonts, and spacing.
 */
- html {
-     background-color: rgb(177, 135, 27);
+html {
+    background-color: rgb(177, 135, 27);
     font-family: 'DokbinPlain', sans-serif;
- }
- 
+}
 
- body {
-     background-color: rgb(235, 203, 122);
- }
 
- body p {
-     padding: 8px; 
- }
+body {
+    background-color: rgb(235, 203, 122);
+}
 
- 
- body img {
-     padding: 4px;
- }
+body p {
+    padding: 8px;
+}
 
- footer {
-     background-color: chocolate;
-     color: black;
-     opacity: 0.5;
-     text-align: center;
-     padding: 10px;
- }
 
- /* section styles */
- /* 
+body img {
+    padding: 4px;
+}
+
+footer {
+    background-color: chocolate;
+    color: black;
+    opacity: 0.5;
+    text-align: center;
+    padding: 10px;
+}
+
+/* section styles */
+/* 
 The section stlyes holds the style rules for the section elements. 
 These style rules have more complicated selectors ,classes. These let you get more specicfic with what you want to affect.
 However, they still have some of the more basic style rules including color, font, and spacing.
 */
 
- section#leftcol h1 {
-     font-family: 'champagne';
-     font-size: 3.5em;
-     margin: 13px;
-     padding-left: 15px;
-     text-align: left;
-    
+section#leftcol h1 {
+    font-family: 'champagne';
+    font-size: 3.5em;
+    text-align: left;
 
- }
+}
 
- section#leftcol h2 {
-     padding: 0px;
-     margin-top: 5px;
-     margin-bottom: 5px;
+section#leftcol h2 {
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 
- }
+}
 
- section#rightcol>nav>h2 {
+
+
+
+
+section#rightcol>nav>h2 {
     font-family: 'champagne';
     color: black;
     opacity: 0.7;
     font-size: 3em;
     margin-top: 20px;
     margin-bottom: 20px;
- }
+    background-color: chocolate;
+}
 
- section#rightcol nav {
-     padding: 8px 0px 16px 55px;
-     margin: 16px 0px 16px 0px;
- }
+section#rightcol nav {
+    padding: 8px 0px 16px 55px;
+    margin: 16px 0px 16px 0px;
+}
 
- 
+
 
 /* header styles */
 /* 
@@ -108,65 +111,87 @@ For these I only needed to adjust the font weight of the h1 elements. This makes
 */
 h1 {
     font-weight: bolder;
+    margin: 5px 5px 0px 3px;
+    background-color: chocolate;
 }
 
 
- /* navigation styles */
- /* 
+/* navigation styles */
+/* 
 The navigation stlyes holds the style rules for the nav elements. 
 These hold more of the basic style rules such as colors, fonts, and spacing. 
 However, the style rules become very specific about what affects the nav elements. 
 For example, when you hover of one of the top hyperlinks, it will change color.
 */
 nav {
-    padding-left: 53px;
+    margin-left: 30px;
+    margin-right: 5px;
 }
 
 
- nav>ul {
+nav>ul {
     list-style-type: none;
+    line-height: 1.3em;
+    padding: 2px;
 }
- 
- 
- nav>ul>li>a {
-     color: maroon;
-     text-decoration: none;
-     
- }
 
- nav>ul>li>a:hover,
- nav>ul>li>a:active {
-     color: rgb(225, 0, 0);
- }
 
- 
+nav>ul>li>a {
+    color: maroon;
+    text-decoration: none;
 
- /* blockquote styles */
- /* 
+}
+
+
+
+nav>ul>li>a:link,
+nav>ul>li>a:visited {
+    color: maroon;
+    text-decoration: none;
+}
+
+nav>ul>li>a:hover,
+nav>ul>li>a:active {
+    color: rgb(225, 0, 0);
+}
+
+
+
+/* blockquote styles */
+/* 
 The blockquote stlyes holds the style rules for the blockquote element. 
 These hold more of the basic style rules such as colors, fonts, and spacing. 
 For this code I added quotation marks before and after the text.
 */
- blockquote {
-     background-color: chocolate;
-     padding: 10px 30px 10px 30px;
-     margin: 80px 0px 0px 0px;
-     font-family: 'DokbinPlain', sans-serif;
+blockquote {
+    background-color: chocolate;
+    padding: 10px 30px 10px 30px;
+    margin: 80px 0px 0px 0px;
+    font-family: 'DokbinPlain', sans-serif;
 
- }
+
+}
 
 blockquote::before {
     content: open-quote;
+    font-size: 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 
- blockquote::after {
-     content: close-quote;
- }
+blockquote::after {
+    content: close-quote;
+    font-size: 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
 
- /* aside styles */
- /* 
+/* aside styles */
+/* 
 The aside stlyes holds the style rules for the aside elements. 
 These hold more of the basic style rules such as colors, fonts, and spacing.
+The selector get more specific about what the style rule selects.
+For example, when you hover of one of the top hyperlinks, it will change color.
 */
 
 aside {
@@ -175,8 +200,33 @@ aside {
     font-family: 'DokbinPlain', sans-serif;
 }
 
+aside h1 {
+    font-size: 2.3em;
 
+}
 
+aside h2 {
+    font-weight: normal
+}
 
+aside p {
+    padding: 0px;
+    margin: 5px;
 
+}
 
+aside ul li a {
+    text-decoration: underline;
+    color: maroon;
+}
+
+aside ul li a:link,
+aside ul li a:visited {
+    color: maroon;
+    text-decoration: underline;
+}
+
+aside ul li a:hover,
+aside ul li a:active {
+    color: rgb(225, 0, 0);
+}
